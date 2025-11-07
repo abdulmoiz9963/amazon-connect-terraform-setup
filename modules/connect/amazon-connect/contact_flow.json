@@ -1,0 +1,13 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "Start",
+  "Actions": [
+    {
+      "Identifier": "Start",
+      "Type": "Message",
+      "Parameters": {
+        "Text": "Welcome to our contact center!"
+      }
+    }
+  ]
+}
