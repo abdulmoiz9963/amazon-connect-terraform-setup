@@ -21,9 +21,16 @@ module "sns" {
   alert_email = var.alert_email
 }
 
-module "amazon_connect" {
-  source         = "./modules/connect/amazon-connect"
-  instance_alias = var.instance_alias
+# module "amazon_connect" {
+#   source         = "./modules/connect/amazon-connect"
+#   instance_alias = var.instance_alias
+# }
+resource "aws_connect_instance" "this" {
+  # Placeholder values just to let Terraform recognize the resource
+  identity_management_type = "CONNECT_MANAGED"
+  instance_alias           = "placeholder-alias"
+  inbound_calls_enabled    = true
+  outbound_calls_enabled   = true
 }
 
 module "cloudwatch" {

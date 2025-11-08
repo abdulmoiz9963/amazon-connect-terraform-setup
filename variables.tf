@@ -1,7 +1,7 @@
 variable "region" {
   description = "AWS region to deploy into"
   type        = string
-  default     = "eu-central-1"
+  default     = "us-west-2"
 }
 
 # Optional: set via environment or CLI if you want to use a named profile
@@ -17,6 +17,5 @@ variable "alert_email" {
 }
 
 variable "instance_alias" {
-  description = "Amazon Connect instance alias"
-  default     = "amazon-connect-instance"
+  default = "amazon-connect-instance-moiz9154"
 }

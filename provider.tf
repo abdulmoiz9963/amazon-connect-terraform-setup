@@ -3,8 +3,8 @@ terraform {
 
   backend "s3" {
     bucket         = "amazon-connect-terraform-states"
-    key            = "eu-central-1/connect/terraform.tfstate"
-    region         = "eu-central-1"
+    key            = "global/s3/terraform.tfstate"
+    region         = "us-west-2"
     dynamodb_table = "terraform-lock-table"
     encrypt        = true
   }
@@ -18,5 +18,6 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
+  region  = var.region
+  profile = var.profile
 }
